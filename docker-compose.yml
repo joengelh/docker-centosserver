@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  rocky:
+   build: .
+   restart: always
+   container_name: rocky-ssh
+   ports:
+   - "10010:22"
+   volumes:
+   - type: volume
+     source: nfs
+     target: /home/ansible/nfs
+     volume:
+       nocopy: true
+   restart: always
+
+volumes:
+  nfs:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.2.11,nolock,soft,rw"
+      device: ":/mnt/Datastore1"
