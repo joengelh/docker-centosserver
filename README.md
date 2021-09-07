@@ -10,7 +10,8 @@ place your public ssh key in ``authorized_keys`` and run
 if the container needs to be restarted and all the configuration done by 
 ansible for example reversed, run ``docker-compose restart``
 
-the container is started attaching to a NFS share and ``cd``s into it upon login
+the container is started attaching to a NFS share and ``cd``s into it upon login.
+In order to modify the nfs location, review the ``docker-compose.yml``
 
 docker-compose can be installed using the ansible role:
 [go to github](https://github.com/joengelh/ansible-kvm/tree/main/roles/docker-compose)
