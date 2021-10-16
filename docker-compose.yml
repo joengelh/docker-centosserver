@@ -20,4 +20,4 @@ volumes:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.2.11,nolock,soft,rw"
-      device: ":/mnt/Datastore1"
+      device: ":/home/ansible/Datastore1"
